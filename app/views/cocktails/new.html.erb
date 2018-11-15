@@ -1,12 +1,9 @@
-<%= form_for(@cocktail) do |f| -%>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<h2>Create a new cocktail</h2>
 
-  <%= f.label :ingredients %>
-  <%= f.text_field :ingredients %>
-
-  <%= f.label :doses %>
-  <%= f.text_field :doses %>
-
-  <%= f.submit %>
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name, placeholder: "e.g. mojito", label:" please enter a name" %>
+  <%#= f.text_field :name %>
+  <%#= f.association :ingredient %>
+  <%= f.button :submit %>
 <% end %>
+
