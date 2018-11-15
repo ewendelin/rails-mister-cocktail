@@ -4,11 +4,11 @@
   <p>
      <%= dose.description %>
      <%= dose.ingredient.name %>
-     <%= link_to "Remove", cocktail_dose_path(@cocktail, dose),
+     <%= link_to "Remove", dose_path(dose),
      method: :delete,
      data: {confirm: "really?"} %>
 
   </p>
 <% end %>
- <p> <%= link_to "Back", cocktails_path(@cocktail) %></p>
+ <p> <%= link_to "Back", cocktails_path %></p>
  <p> <%= link_to "Add dose", new_cocktail_dose_path(@cocktail) %></p>
