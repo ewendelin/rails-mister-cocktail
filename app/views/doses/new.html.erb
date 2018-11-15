@@ -1,7 +1,7 @@
 <h2>Create a new dose</h2>
-<%= simple_form_for [@cocktail, dose_path] do |f| %>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
-  <%= f.association :ingredients %>
+  <%= f.association :ingredient %>
   <%= f.submit "Add new", class: "btn btn-primary" %>
 <% end %>
 
