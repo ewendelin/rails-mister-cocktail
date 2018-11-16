@@ -7,6 +7,12 @@
   position: relative;
   margin: 10px;
   border-radius: 7px;
+  transition: all 0.3s ease;
+  box-shadow: 1px 1px 2px #e7e7e7;
+}
+
+.card:hover{
+  margin-top:-10px;
 }
 
 .card-description h2 {

@@ -21,9 +21,9 @@
 
         <div class="container">
           <div class="row">
+                  <% @cocktails.each do |cocktail| %>
             <div class="col-xs-12 col-sm-4">
                  <div class="cocktail-list">
-                  <% @cocktails.each do |cocktail| %>
                      <%= link_to cocktail_path(cocktail) do %>
                      <div class="card"
                   style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
@@ -34,9 +34,9 @@
                       </div>
                     </div>
                  <% end %>
-                <% end %>
             </div>
           </div>
+                <% end %>
         </div>
       </div>
     </div>
