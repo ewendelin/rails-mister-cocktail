@@ -3,7 +3,7 @@ import Typed from 'typed.js';
 function loadDynamicBannerText() {
   new Typed('#banner-typed-text', {
     strings: ["Liquid Courage"],
-    typeSpeed: 80,
+    typeSpeed: 220,
     loop: true
   });
 }
