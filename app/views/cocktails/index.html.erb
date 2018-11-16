@@ -1,24 +1,56 @@
-<div class="navbar">
-  <!-- Logo -->
-    <!-- <img src="assets/images/liquid-curage-logo.png" class="navbar-logo"> -->
-    <%= image_tag ("liquid-curage-logo.png")  %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+ <link href="https://fonts.googleapis.com/css?family=Knewave|Press+Start+2P" rel="stylesheet">
+</head>
 
-  <h1>Liquid Courage</h1>
 
-  <!-- Right Navigation -->
-  <div class="navbar-right hidden-xs hidden-sm">
-    <a href="" class="navbar-create"><%= link_to "Create a new cocktail", new_cocktail_path %></a>
-  </div>
-</div>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <!-- Logo -->
+          <!-- <img src="assets/images/liquid-curage-logo.png" class="navbar-logo"> -->
+          <%=  image_tag ("liquid-curage-logo.png") ,class: "navbar-logo" %>
 
-  <div class="cocktail-list">
-    <% @cocktails.each do |cocktail| %>
-    <p>
-       <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </p>
-    <% end %>
-  </div>
+        <h1>Liquid Courage</h1>
 
-  <!--   <%= cl_image_tag("pkzjwhkemzb2x9xkjlir",
-      width: 400, height: 300, crop: :fill) %>
- -->
+        <!-- Right Navigation -->
+        <div class="navbar-right hidden-xs hidden-sm">
+          <a href="" class="navbar-create"><%= link_to "Create a new cocktail", new_cocktail_path %></a>
+        </div>
+      </div>
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+                  <div class="card-category">Popular</div>
+                  <div class="card-description">
+                    <h2>   <div class="cocktail-list">
+                      <% @cocktails.each do |cocktail| %>
+                      <p>
+                         <%= link_to cocktail.name, cocktail_path(cocktail) %>
+                      </p>
+                      <% end %>
+                    </div>
+                    </h2>
+                    <p>Very cool city, the best</p>
+                  </div>
+                  <a class="card-link" href="#" ></a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!--   <%= cl_image_tag("pkzjwhkemzb2x9xkjlir",
+            width: 400, height: 300, crop: :fill) %>
+       -->
+    </div>
+</body>
+</html>
+
