@@ -1,12 +1,43 @@
-<h2>Create a new cocktail</h2>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name, placeholder: "e.g. mojito", label:" please enter a name" %>
-  <%#= f.text_field :name %>
-  <%#= f.association :ingredient %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.button :submit %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+     <link href="https://fonts.googleapis.com/css?family=Lora:700,700i" rel="stylesheet">
+</head>
+<body>
+     <div class="container">
+      <div class="navbar">
+        <!-- Logo -->
+          <!-- <img src="assets/images/liquid-curage-logo.png" class="navbar-logo"> -->
+          <%=  image_tag ("liquid-curage-logo.png") ,class: "navbar-logo" %>
 
-<% end %>
+        <h1>Liquid Courage</h1>
+
+        <!-- Right Navigation -->
+        <div class="navbar-right hidden-xs hidden-sm">
+        </div>
+      </div>
+
+
+      <h2>Create a new cocktail</h2>
+
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name, placeholder: "e.g. mojito", label:" please enter a name" %>
+        <%#= f.text_field :name %>
+        <%#= f.association :ingredient %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.button :submit %>
+
+      <% end %>
+
+
+</body>
+</html>
+
+
+
+
+
 
