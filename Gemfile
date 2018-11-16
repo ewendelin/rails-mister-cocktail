@@ -38,7 +38,9 @@ gem 'font-awesome-sass', '~> 5.0.9'
 gem 'simple_form'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog-aws'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'dotenv-rails', groups: [:development, :test]
