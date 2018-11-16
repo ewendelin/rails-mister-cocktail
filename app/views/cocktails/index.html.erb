@@ -1,24 +1,27 @@
 
 
-<div class="navbar-wagon">
+<div class="navbar">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
+  <a href="/" class="navbar-logo">
     <img src="images/logo.png" alt="logo">
   </a>
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link"><%= link_to "Create a new cocktail", new_cocktail_path %></a>
+  <h1>Liquid Courage</h1>
+
+  <!-- Right Navigation -->
+  <div class="navbar-right hidden-xs hidden-sm">
+
+    <a href="" class="navbar-create navbar-link"><%= link_to "Create a new cocktail", new_cocktail_path %></a>
   </div>
 
 
-<h1>Liquid Courage</h1>
-<%= cl_image_tag("pkzjwhkemzb2x9xkjlir",
-      width: 400, height: 300, crop: :fill) %>
-<% @cocktails.each do |cocktail| %>
-  <p>
-     <%= link_to cocktail.name, cocktail_path(cocktail) %>
-  </p>
 
-<% end %>
+
+  <div class="cocktail-list">
+    <% @cocktails.each do |cocktail| %>
+    <p>
+       <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    </p>
+    <% end %>
+  </div>
 
